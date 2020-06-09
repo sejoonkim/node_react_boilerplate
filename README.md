@@ -226,3 +226,59 @@
 - Material UI, React Bootstrap, Semantic UI, Ant Design, Materialize...
 
 - `npm i antd --save`
+
+<br/>
+
+<br/>
+
+## Redux
+
+### 개념
+
+- a predictable state container for JavaScript apps: 상태 관리 라이브러리입니다.
+
+- What is State?
+
+| Props                                                               | State                                                                               |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| = "Properties"                                                      |                                                                                     |
+| 컴포넌트간 소통하는 방식이다                                        | 컴포넌트 안에서 data의 상태를 지칭한다. 예) 검색창 글 입력 시 글이 변하는 state관리 |
+| Downward, Parent에서 Child로 흐른다.                                | state이 변하면 re-render된다.                                                       |
+| Parent에서 Props 받으면 Child는 그것을 수정할 수 없다 = 불변성 원리 | mutable                                                                             |
+
+- Redux가 없다면 state가 바뀔때 해당 컴포넌트를 관리하는 부모 컴포넌트에서 값을 업데이트 해야 한다. 시간이 오래 걸릴 수 있다.
+- Redux의 `store`에다가 직접 연락하여 상태를 관리한다.
+
+<br/>
+
+### Redux Data Flow
+
+- 단방향적이다.
+- Flow
+
+  1. React Component
+     - Dispatch(action)
+  2. Action
+  3. Reducer
+  4. Store
+     - Subscribe
+     - return to `1.`
+
+- Action
+
+  - object
+    - 무엇이 일어났는지 설명한다.
+    - 예) 사용자가 좋아요 했다, 사용자 정보를 불러왔다. TODO 리스트에 항목 추가했다.
+
+- Reducer
+
+  - 이전 state과 action object를 받은 후에 next state를 return한다.
+  - pure function이기에 reducer 내부에서 하지 말아야할 것들
+    - mutate its arguments
+    - perform side effects like API calls and routing transitions
+    - call non-pure functions like `Date.now()`, `Math.random()`
+
+- Store
+  - object with few methods
+  - holds the whole `state tree` of app
+  - only `dispatch` -> `action` => change in `Store`
