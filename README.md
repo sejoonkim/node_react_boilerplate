@@ -164,3 +164,10 @@
       - 유저가 Admin인지 확인한 후 출입여부를 결정한다.
 
   - utils: 여러 군데에서 쓰일 수 있는 것들을 포함한다. 어디서는 쓸 수 있다.
+
+<br/>
+
+### React Router DOM
+
+- `App.js`에 적용하기
+  - 참고 [Link](https://reacttraining.com/react-router/web/example/basic)
