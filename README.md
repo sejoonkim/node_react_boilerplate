@@ -183,3 +183,18 @@
   2. 서버는 DB에 유저의 ID, PW 확인한다.
      - 성공 실패 메시지를 Client에 보여준다.
 - `Axios` 활용하여 Client에서 Server로 Request 보낸다.
+
+<br/>
+
+### CORS 이슈, Proxy 설정
+
+- 포트가 다른 현재상황(client: 3000, server: 5000)
+
+- CORS
+
+  - 보안적 이슈를 위해 정책이 존재한다.
+
+- 해결방법
+
+  - 여러 방법이 있지만, server, client에서 각각 설정하는 방법 존재
+  - Proxy 이용하는 방법 - [Link](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
