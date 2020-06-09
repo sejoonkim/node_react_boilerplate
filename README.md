@@ -24,3 +24,24 @@
 - `User Schema`
   - Model은 Schema를 감싼다.
   - Schema는 하나하나의 DB에 저장되는 요소들을 의미한다.
+
+<br/>
+
+## Git Basics
+
+- `git status`
+  - 깃의 상태를 보기 원할 때 사용된다.
+- `.gitignore`
+  - git push 시 필요없는 파일/폴더를 지정한다.
+
+<br/>
+
+## BodyParser, PostMan, 회원 가입 기능
+
+- BodyParser
+
+  - ID
+  - PW
+
+- PostMan
+  - complete API development environment
