@@ -16,3 +16,11 @@
 - MongoDB 계정생성 및 cluster 생성하기
 
 - MongoDB에 성공적으로 연결되었는지 확인하기
+
+<br/>
+
+## MongoDB Model & Schema
+
+- `User Schema`
+  - Model은 Schema를 감싼다.
+  - Schema는 하나하나의 DB에 저장되는 요소들을 의미한다.
