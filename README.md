@@ -8,3 +8,11 @@
 
 - NodeJS를 쉽게 이해할 수 있는 프레임워크
 - `index.js`에서 기본적인 `express js` 앱 만들기
+
+<br/>
+
+## MongoDB 연결하기
+
+- MongoDB 계정생성 및 cluster 생성하기
+
+- MongoDB에 성공적으로 연결되었는지 확인하기
