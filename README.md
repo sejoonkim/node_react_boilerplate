@@ -189,12 +189,26 @@
 ### CORS 이슈, Proxy 설정
 
 - 포트가 다른 현재상황(client: 3000, server: 5000)
-
 - CORS
-
   - 보안적 이슈를 위해 정책이 존재한다.
-
 - 해결방법
-
   - 여러 방법이 있지만, server, client에서 각각 설정하는 방법 존재
   - Proxy 이용하는 방법 - [Link](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
+
+<br/>
+
+### Proxy Server
+
+- 유저 - Proxy Server - 인터넷
+
+  - Proxy Server 역할
+    - 유저 IP 변환(Hidden)
+    - 방화벽
+    - 웹 필터
+    - 캐쉬 데이너, 공유 데이터 제공 기능
+
+- 사용 이유
+  - 인터넷 사용 제어
+  - 캐쉬 통한 더 빠른 인터넷 제공
+  - 더 나은 보안 제공
+  - 이용 제한된 사이트 접근 가능
