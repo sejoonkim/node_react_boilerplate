@@ -212,3 +212,9 @@
   - 캐쉬 통한 더 빠른 인터넷 제공
   - 더 나은 보안 제공
   - 이용 제한된 사이트 접근 가능
+
+<br/>
+
+### Concurrently 이용하여 프론트, 백 한번에 켜기
+
+- `npm install concurrently --save`
