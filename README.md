@@ -91,3 +91,32 @@
 ### Logout 기능
 
 - 유저의 토큰을 지운다면 Auth -> 실패해서 로그인이 풀린다.
+
+<br/>
+
+<br/>
+
+## React란?
+
+### 개념
+
+- 정의: Library, made by Facebook, released in 2013
+- 특징: Components, module과 비슷하게 재사용성이 뛰어나다.
+
+- Real DOM, Virtual DOM
+
+  - ex) 10개의 리스트
+
+    - 그 중 한 가지의 리스트만 update 됨
+    - real: 전테 리스트 다시 reload
+    - virtual: 바뀐 리스트만 DOM에서 적용된다.
+
+  - virtual DOM = real DOM과 같은 property 갖고 있으면서, real DOM을 가볍게 복사했다.
+
+  - How gets UPDATED?
+
+    1. JSX를 렌더링한다. -> virtual DOM이 update 됨
+
+    2. virtual DOM이 이전 virtual DOM에서 찍어준 snapshot과 비교를 해서 바뀐 부분을 찾는다. = `diffing`
+
+    3. 바뀐 부분만 real DOM에서 바꿔준다.
