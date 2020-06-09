@@ -282,3 +282,31 @@
   - object with few methods
   - holds the whole `state tree` of app
   - only `dispatch` -> `action` => change in `Store`
+- `<Provider />`
+  - hoc by React Redux
+  - lets you bind Redux to React
+
+<br/>
+
+### Redux UP
+
+- 4 dependencies
+
+  1. redux
+  2. react-redux
+  3. redux-promise : Redux 미들웨어
+  4. redux-thunk : Redux 미들웨어
+
+- Redux store는 `항상 plain object`를 받지 않는다!
+  - Promise나 Functions를 받는 상황도 존재한다.
+  - `redux-thunk` : Functions를 받는 방법을 알려준다. Reducer에게 pass가 아니라 함수를 call 한다.
+  - `redux-promise` : Promise를 받는 방법을 알려준다. Promise가 `resolve`, `reject` 되었을 때 dispatching actions를 한다.
+- redux devtools를 이용하여 redux 관리 쉽게한다. [Link](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+
+- Store (reducer를 다양하게 포함한다, 각각 다양한 state을 관리한다.)
+  - `CombineReducer`를 통해서 `Root Reducer`로 합쳐준다.
+  - User Reducer
+  - Comment Reducer
+  - Post Reducer
+  - Subscribe Reducer
+  - Number Reducer
