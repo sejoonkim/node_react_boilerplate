@@ -26,6 +26,10 @@ mongoose
 
 app.get("/", (req, res) => res.send("Hello World")); // root directory
 
+app.get("/api/hello", (req, res) => {
+  res.send("Hello from Server");
+});
+
 app.post("/api/users/register", (req, res) => {
   // get info needed for register -> save to DB
   const user = new User(req.body);

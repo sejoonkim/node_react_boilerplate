@@ -171,3 +171,15 @@
 
 - `App.js`에 적용하기
   - 참고 [Link](https://reacttraining.com/react-router/web/example/basic)
+
+<br/>
+
+### Data Flow & Axios
+
+- 데이터 흐름
+  1. 유저가 로그인하고 싶다.
+     - Client에 ID, PW 제공한다.
+     - Server에 Request
+  2. 서버는 DB에 유저의 ID, PW 확인한다.
+     - 성공 실패 메시지를 Client에 보여준다.
+- `Axios` 활용하여 Client에서 Server로 Request 보낸다.
