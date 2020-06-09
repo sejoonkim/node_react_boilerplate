@@ -104,19 +104,63 @@
 - 특징: Components, module과 비슷하게 재사용성이 뛰어나다.
 
 - Real DOM, Virtual DOM
-
   - ex) 10개의 리스트
-
     - 그 중 한 가지의 리스트만 update 됨
     - real: 전테 리스트 다시 reload
     - virtual: 바뀐 리스트만 DOM에서 적용된다.
-
   - virtual DOM = real DOM과 같은 property 갖고 있으면서, real DOM을 가볍게 복사했다.
-
   - How gets UPDATED?
-
     1. JSX를 렌더링한다. -> virtual DOM이 update 됨
-
     2. virtual DOM이 이전 virtual DOM에서 찍어준 snapshot과 비교를 해서 바뀐 부분을 찾는다. = `diffing`
-
     3. 바뀐 부분만 real DOM에서 바꿔준다.
+
+<br/>
+
+### 리액트 시작하기
+
+- 이전: babel, webpack 설정을 통해 일일히 설정해야 했다.
+  - babel: 최신 JS 문법을 지원하지 않는 browser들을 위해 최신 JS 문법을 구형 browser에서도 작동하게 변환 시켜준다. (ES6 -> ES5)
+  - webpack: static module bundler
+    - JS, HTML, library, framework!! 복잡!
+    - 많은 모듈 합하여 간단하게 한다.
+      - ex) Sass -> CSS
+- 현재: `create-react-app .`
+  - . 은 현대 디렉토리에 설치한다는 것이다.
+- npm vs npx
+  - npm: 레지스트리(라이브러리) 저장소 역할한다.
+    - build 시 활용된다.
+    - local -> /node_modules
+    - global
+  - npx
+    - 다운없이 npm registry에서 `create-react-app`을 찾아서 실행시킨다.
+    - 장점
+      1. save disk space
+      2. always use the most recent Version
+- 구조: webpack은 `/public`을 상관하지 않는다. Only `/src`
+
+<br/>
+
+### Boiler Plate에 특성화된 구조
+
+- `src/`
+
+  - \_actions, \_reducer : Redux를 위한 폴더들이다.
+
+  - components/views : Page들을 넣는다.
+
+  - components/views/Sections : 해당 페이지에 관련된 CSS 파일이나, component들을 넣는다.
+
+  - App.js : Routing 관련 처리한다.
+
+  - Config.js : 환경 변수 정한다.
+
+  - hoc : Higher Order Component
+
+    - 다른 component를 갖는 function이다
+
+      예) Auth (HOC)
+
+      - ADMIN COMPONENT(Admin 유저만 들어갈 수 있다)
+      - 유저가 Admin인지 확인한 후 출입여부를 결정한다.
+
+  - utils: 여러 군데에서 쓰일 수 있는 것들을 포함한다. 어디서는 쓸 수 있다.
