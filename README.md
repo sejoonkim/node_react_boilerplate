@@ -45,3 +45,17 @@
 
 - PostMan
   - complete API development environment
+
+<br/>
+
+## Nodemon 설치하기
+
+`npm install nodemon --save-dev`
+
+<br/>
+
+## Bcrypt로 비밀번호 암호화하기
+
+- salt를 이용해서 비밀번호 암호화
+
+- 비밀번호를 바꿀 때만 비밀번호 암호화하기
