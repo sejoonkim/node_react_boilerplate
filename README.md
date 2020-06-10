@@ -310,3 +310,32 @@
   - Post Reducer
   - Subscribe Reducer
   - Number Reducer
+
+<br/>
+
+### React vs React Hooks
+
+| Class Component       | Functional Component  |
+| --------------------- | --------------------- |
+| Provide more features | Provide less features |
+| Longer code           | Shorter Code          |
+| Complex code          | Simpler Code          |
+| Slower Performance    | Faster Performance    |
+
+- 기존 Functional Component에서는 Class Component의 "아래"를 사용할 수 없었다.
+
+  - Mounting
+    1. constructor
+    2. render
+    3. "React updates DOM and refs"
+    4. componentDidMount
+  - Updating
+    1. render (New Props, setState(), forceUpdate())
+    2. "React updates DOM and refs"
+    3. componentDidUpdate
+  - Unmounting
+    1. componentWillUnmount
+
+- React 16.8 Hooks update
+  - Lifecycle, state부여...
+  - 다 사용가능하게 되었다.
