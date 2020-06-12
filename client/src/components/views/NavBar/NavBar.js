@@ -71,6 +71,7 @@ function NavBar(props) {
 
   const handleCloseMypage = () => {
     setAnchorElMypage(null);
+    props.history.push('/mypage')
   };
 
   const handleLogout = () => {
@@ -153,6 +154,7 @@ function NavBar(props) {
                 open={openMypage}
                 onClose={handleCloseMypage}
               >
+              
                 <MenuItem onClick={handleCloseMypage}>마이페이지</MenuItem>
                 <MenuItem onClick={handleLogout}>로그아웃</MenuItem>
               </Menu>
