@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 
 function MyPage(props) {
     return (
-        <div
+    <div
       style={{
         display: "flex",
         justifyContent: "center",

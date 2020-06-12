@@ -7,6 +7,7 @@ import RegisterPage from "./components/views/RegisterPage/RegisterPage";
 import Auth from './hoc/auth'
 import NavBar from "./components/views/NavBar/NavBar";
 import MyPage from "./components/views/MyPage/MyPage";
+import DonationMapPage from "./components/views/DonationMapPage/DonationMapPage"
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
           <Route exact path="/mypage" component={Auth(MyPage, true)} />
+          <Route exact path="/donationmap" component={Auth(DonationMapPage, null)} />
         </Switch>
       </div>
     </Router>
