@@ -117,3 +117,4 @@ dist
 package-lock.json
 
 dev.js
+.DS_STORE
